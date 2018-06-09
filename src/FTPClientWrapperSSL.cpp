@@ -75,8 +75,8 @@ int FTPClientWrapperSSL::SetTimeout(int timeout) {
 	return ret;
 }
 
-int FTPClientWrapperSSL::Connect() {
-	if (m_connected)
+int FTPClientWrapperSSL::Connect(int force) {
+	if (m_connected && !force)
 		return OnReturn(0);
 
 	m_client.SetControlPort(m_port);
