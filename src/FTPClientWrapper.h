@@ -79,7 +79,7 @@ public:
 	virtual int				SetTimeout(int timeout);
 	virtual int				SetCertificates(vX509 * x509Vect);
 
-	virtual int				Connect() = 0;
+	virtual int				Connect(int force = 0) = 0;
 	virtual int				Disconnect() = 0;
 
 	//Don't forget to call releasedir
