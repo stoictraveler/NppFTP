@@ -235,12 +235,12 @@ QueueDownload::~QueueDownload() {
 }
 
 int QueueDownload::Perform() {
-	if (m_doConnect && !m_client->IsConnected()) {
-		m_result = m_client->Connect();
-		if (m_result == -1)
-			return m_result;
-		m_result = -1;
-	}
+	//if (m_doConnect && !m_client->IsConnected()) {
+	m_result = m_client->Connect();
+	if (m_result == -1)
+		return m_result;
+	m_result = -1;
+	//}
 
 	if (m_client->GetType() == Client_SSL) {
 		((FTPClientWrapperSSL*)m_client)->SetTransferMode(m_tMode);
@@ -282,12 +282,12 @@ QueueDownloadHandle::~QueueDownloadHandle() {
 }
 
 int QueueDownloadHandle::Perform() {
-	if (m_doConnect && !m_client->IsConnected()) {
-		m_result = m_client->Connect();
-		if (m_result == -1)
-			return m_result;
-		m_result = -1;
-	}
+	//if (m_doConnect && !m_client->IsConnected()) {
+	m_result = m_client->Connect();
+	if (m_result == -1)
+		return m_result;
+	m_result = -1;
+	//}
 
 	if (m_client->GetType() == Client_SSL) {
 		((FTPClientWrapperSSL*)m_client)->SetTransferMode(m_tMode);
@@ -329,12 +329,12 @@ QueueUpload::~QueueUpload() {
 }
 
 int QueueUpload::Perform() {
-	if (m_doConnect && !m_client->IsConnected()) {
-		m_result = m_client->Connect();
-		if (m_result == -1)
-			return m_result;
-		m_result = -1;
-	}
+	//if (m_doConnect && !m_client->IsConnected()) {
+	m_result = m_client->Connect();
+	if (m_result == -1)
+		return m_result;
+	m_result = -1;
+	//}
 
 	if (m_client->GetType() == Client_SSL) {
 		((FTPClientWrapperSSL*)m_client)->SetTransferMode(m_tMode);
@@ -396,12 +396,12 @@ QueueGetDir::~QueueGetDir() {
 }
 
 int QueueGetDir::Perform() {
-	if (m_doConnect && !m_client->IsConnected()) {
-		m_result = m_client->Connect();
-		if (m_result == -1)
-			return m_result;
-		m_result = -1;
-	}
+	//if (m_doConnect && !m_client->IsConnected()) {
+	m_result = m_client->Connect();
+	if (m_result == -1)
+		return m_result;
+	m_result = -1;
+	//}
 
     if (parentDirs.size() > 0) {
 
@@ -470,12 +470,12 @@ QueueCreateDir::~QueueCreateDir() {
 }
 
 int QueueCreateDir::Perform() {
-	if (m_doConnect && !m_client->IsConnected()) {
-		m_result = m_client->Connect();
-		if (m_result == -1)
-			return m_result;
-		m_result = -1;
-	}
+	//if (m_doConnect && !m_client->IsConnected()) {
+	m_result = m_client->Connect();
+	if (m_result == -1)
+		return m_result;
+	m_result = -1;
+	//}
 
 	m_result = m_client->MkDir(m_dirPath);
 	return m_result;
@@ -506,12 +506,12 @@ QueueRemoveDir::~QueueRemoveDir() {
 }
 
 int QueueRemoveDir::Perform() {
-	if (m_doConnect && !m_client->IsConnected()) {
-		m_result = m_client->Connect();
-		if (m_result == -1)
-			return m_result;
-		m_result = -1;
-	}
+	//if (m_doConnect && !m_client->IsConnected()) {
+	m_result = m_client->Connect();
+	if (m_result == -1)
+		return m_result;
+	m_result = -1;
+	//}
 
 	m_result = m_client->RmDir(m_dirPath);
 	return m_result;
@@ -542,12 +542,12 @@ QueueCreateFile::~QueueCreateFile() {
 }
 
 int QueueCreateFile::Perform() {
-	if (m_doConnect && !m_client->IsConnected()) {
-		m_result = m_client->Connect();
-		if (m_result == -1)
-			return m_result;
-		m_result = -1;
-	}
+	//if (m_doConnect && !m_client->IsConnected()) {
+	m_result = m_client->Connect();
+	if (m_result == -1)
+		return m_result;
+	m_result = -1;
+	//}
 
 	m_result = m_client->MkFile(m_filePath);
 	return m_result;
@@ -579,12 +579,12 @@ QueueDeleteFile::~QueueDeleteFile() {
 }
 
 int QueueDeleteFile::Perform() {
-	if (m_doConnect && !m_client->IsConnected()) {
-		m_result = m_client->Connect();
-		if (m_result == -1)
-			return m_result;
-		m_result = -1;
-	}
+	//if (m_doConnect && !m_client->IsConnected()) {
+	m_result = m_client->Connect();
+	if (m_result == -1)
+		return m_result;
+	m_result = -1;
+	//}
 
 	m_result = m_client->DeleteFile(m_filePath);
 	return m_result;
@@ -617,12 +617,12 @@ QueueRenameFile::~QueueRenameFile() {
 }
 
 int QueueRenameFile::Perform() {
-	if (m_doConnect && !m_client->IsConnected()) {
-		m_result = m_client->Connect();
-		if (m_result == -1)
-			return m_result;
-		m_result = -1;
-	}
+	//if (m_doConnect && !m_client->IsConnected()) {
+	m_result = m_client->Connect();
+	if (m_result == -1)
+		return m_result;
+	m_result = -1;
+	//}
 
 	m_result = m_client->Rename(m_filePath, m_newPath);
 
@@ -659,12 +659,12 @@ QueueQuote::~QueueQuote() {
 }
 
 int QueueQuote::Perform() {
-	if (m_doConnect && !m_client->IsConnected()) {
-		m_result = m_client->Connect();
-		if (m_result == -1)
-			return m_result;
-		m_result = -1;
-	}
+	//if (m_doConnect && !m_client->IsConnected()) {
+	m_result = m_client->Connect();
+	if (m_result == -1)
+		return m_result;
+	m_result = -1;
+	//}
 
 	FTPClientWrapperSSL* client = (FTPClientWrapperSSL*)m_client;
 	m_result = client->Quote(m_quote);
