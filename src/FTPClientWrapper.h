@@ -131,7 +131,7 @@ public:
 
 	virtual FTPClientWrapper*	Clone();
 
-	virtual int				Connect();
+	virtual int				Connect(int force = 0);
 	virtual int				Disconnect();
 
 	virtual int				GetDir(const char * path, FTPFile** files);
@@ -191,7 +191,7 @@ public:
 	virtual int				SetTimeout(int timeout);
 	virtual int				SetCertificates(vX509 * x509Vect);
 
-	virtual int				Connect();
+	virtual int				Connect(int force = 0);
 	virtual int				Disconnect();
 
 	virtual int				GetDir(const char * path, FTPFile** files);
