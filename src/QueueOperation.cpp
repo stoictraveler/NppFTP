@@ -182,7 +182,7 @@ QueueConnect::~QueueConnect() {
 }
 
 int QueueConnect::Perform() {
-	m_result = m_client->Connect();
+	m_result = m_client->Connect(1);
 
 	return m_result;
 }
@@ -236,7 +236,7 @@ QueueDownload::~QueueDownload() {
 
 int QueueDownload::Perform() {
 	//if (m_doConnect && !m_client->IsConnected()) {
-	m_result = m_client->Connect();
+	m_result = m_client->Connect(1);
 	if (m_result == -1)
 		return m_result;
 	m_result = -1;
@@ -283,7 +283,7 @@ QueueDownloadHandle::~QueueDownloadHandle() {
 
 int QueueDownloadHandle::Perform() {
 	//if (m_doConnect && !m_client->IsConnected()) {
-	m_result = m_client->Connect();
+	m_result = m_client->Connect(1);
 	if (m_result == -1)
 		return m_result;
 	m_result = -1;
@@ -330,7 +330,7 @@ QueueUpload::~QueueUpload() {
 
 int QueueUpload::Perform() {
 	//if (m_doConnect && !m_client->IsConnected()) {
-	m_result = m_client->Connect();
+	m_result = m_client->Connect(1);
 	if (m_result == -1)
 		return m_result;
 	m_result = -1;
@@ -397,7 +397,7 @@ QueueGetDir::~QueueGetDir() {
 
 int QueueGetDir::Perform() {
 	//if (m_doConnect && !m_client->IsConnected()) {
-	m_result = m_client->Connect();
+	m_result = m_client->Connect(1);
 	if (m_result == -1)
 		return m_result;
 	m_result = -1;
@@ -471,7 +471,7 @@ QueueCreateDir::~QueueCreateDir() {
 
 int QueueCreateDir::Perform() {
 	//if (m_doConnect && !m_client->IsConnected()) {
-	m_result = m_client->Connect();
+	m_result = m_client->Connect(1);
 	if (m_result == -1)
 		return m_result;
 	m_result = -1;
@@ -507,7 +507,7 @@ QueueRemoveDir::~QueueRemoveDir() {
 
 int QueueRemoveDir::Perform() {
 	//if (m_doConnect && !m_client->IsConnected()) {
-	m_result = m_client->Connect();
+	m_result = m_client->Connect(1);
 	if (m_result == -1)
 		return m_result;
 	m_result = -1;
@@ -543,7 +543,7 @@ QueueCreateFile::~QueueCreateFile() {
 
 int QueueCreateFile::Perform() {
 	//if (m_doConnect && !m_client->IsConnected()) {
-	m_result = m_client->Connect();
+	m_result = m_client->Connect(1);
 	if (m_result == -1)
 		return m_result;
 	m_result = -1;
@@ -580,7 +580,7 @@ QueueDeleteFile::~QueueDeleteFile() {
 
 int QueueDeleteFile::Perform() {
 	//if (m_doConnect && !m_client->IsConnected()) {
-	m_result = m_client->Connect();
+	m_result = m_client->Connect(1);
 	if (m_result == -1)
 		return m_result;
 	m_result = -1;
@@ -618,7 +618,7 @@ QueueRenameFile::~QueueRenameFile() {
 
 int QueueRenameFile::Perform() {
 	//if (m_doConnect && !m_client->IsConnected()) {
-	m_result = m_client->Connect();
+	m_result = m_client->Connect(1);
 	if (m_result == -1)
 		return m_result;
 	m_result = -1;
@@ -660,7 +660,7 @@ QueueQuote::~QueueQuote() {
 
 int QueueQuote::Perform() {
 	//if (m_doConnect && !m_client->IsConnected()) {
-	m_result = m_client->Connect();
+	m_result = m_client->Connect(1);
 	if (m_result == -1)
 		return m_result;
 	m_result = -1;
