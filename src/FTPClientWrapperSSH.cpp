@@ -58,8 +58,8 @@ FTPClientWrapper* FTPClientWrapperSSH::Clone() {
 	return wrapper;
 }
 
-int FTPClientWrapperSSH::Connect() {
-	if (m_connected)
+int FTPClientWrapperSSH::Connect(int force) {
+	if (m_connected && !force)
 		return 0;
 
 	int retcode = connect_ssh();
